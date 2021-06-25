@@ -8,6 +8,7 @@ export class PostResolver {
     posts(
         @Ctx() { em }: MyContext
     ): Promise<Post[]> {
+        //await sleep(3);
         return em.find(Post, {});
     }
 
